@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;500;600;700&display=swap');
+
+:root {
+    --bg-main: #100e1d;
+    --bg-components: #1e213a;
+    --bg-search: #6e707a;
+    --bg-btn: #3c47e9;
+    --border-search: 1px solid #e7e7eb;
+    --border-selected-city: 1px solid #616475;
+    --c-bright: #e7e7eb;
+    --c-dim: #6e707a;
+    --shadow: 0px 4px 4px 0px #00000040;
+    --main-font-familly: 'Raleway', sans-serif;
+    --font-thin: 100;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-standard-size: 1rem;
+    --font-standard-plus-size: 1.2rem;
+    --font-large-size: 2.25rem;
+    --font-x-large-size: 3rem;
+    --font-xxx-large-size: 9rem;
+}

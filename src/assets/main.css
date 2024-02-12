@@ -1,0 +1,14 @@
+@import './variables.css';
+
+body {
+    background: var(--bg-main);
+    font-family: var(--main-font-familly);
+    font-weight: var(--font-medium);
+    color: var(--c-dim);
+}
+
+#app {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+}
