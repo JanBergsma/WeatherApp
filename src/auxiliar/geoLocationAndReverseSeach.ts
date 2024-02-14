@@ -2,6 +2,9 @@ import { useOpenWeather } from '@/composables/openWeatherApi'
 import type Place from '@/stores/PlaceInterface'
 import { useLocationStore } from '@/stores/place'
 import { getFlagEmoji } from './getFlagEmoji'
+
+const { latitude, longitude } = useOpenWeather(null, null)
+
 export function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition, console.error)
@@ -18,6 +21,7 @@ function showPosition(position: GeolocationPosition) {
       console.log(data)
       const lat = parseFloat(data.lat)
       const lon = parseFloat(data.lon)
+
       locationStore.update({
         name: data.name,
         admin1: data.address.state,
@@ -26,7 +30,9 @@ function showPosition(position: GeolocationPosition) {
         longitude: lon,
         flag: getFlagEmoji(data.address.country_code)
       } as Place)
-      useOpenWeather(lat, lon)
+
+      latitude.value = lat
+      longitude.value = lon
     })
     .catch(console.error)
 }

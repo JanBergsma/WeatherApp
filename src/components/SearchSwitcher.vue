@@ -27,9 +27,8 @@ defineExpose({ closeSearch })
 
 <style scoped>
 .container {
-  /* container-name: weather;
-  container-type: inline-size; */
   padding: 1.4rem 0;
+  background: var(--bg-components);
 }
 .close-open-search {
   padding: 0 2rem;
@@ -52,7 +51,8 @@ button {
   color: var(--c-bright);
   font-size: var(--font-standard-size);
   font-weight: var(--font-semibold);
-  padding: 1rem;
+  padding: 0.6rem;
+  border: none;
 }
 
 button:hover,

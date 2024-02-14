@@ -1,6 +1,8 @@
 <template>
-  <section>
+  <section class="daily-highlights-section">
     <div class="highlights">
+      <h2 id="title">Today’s Hightlights</h2>
+
       <article>
         <h2>Wind status</h2>
         <h3>{{ formatter.format(weatherData?.current.windSpeed10m ?? 0) }}<span>km/h</span></h3>
@@ -76,6 +78,12 @@ const windDirectionText = computed(() =>
 </script>
 
 <style scoped>
+#title {
+  font-size: var(--font-large-size);
+  font-weight: var(--font-bold);
+  color: var(--c-bright);
+  grid-column: 1 / -1;
+}
 article {
   background: var(--bg-components);
   color: var(--c-bright);
@@ -89,9 +97,10 @@ article {
   padding-bottom: 1.4rem;
 }
 
-section {
+.daily-highlights-section {
   container: card / inline-size;
   background: var(--bg-main);
+  display: block;
 }
 
 h2 {

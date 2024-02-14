@@ -5,6 +5,9 @@ import type { OpenWeatherDataInterface } from './openWeatherDataInterface'
 const weatherData = ref<OpenWeatherDataInterface | null>(null)
 const error = ref<unknown | null>(null)
 
+const latitude = ref(0.0)
+const longitude = ref(0.0)
+
 const url = 'https://api.open-meteo.com/v1/forecast'
 
 export function useOpenWeather(
@@ -13,8 +16,8 @@ export function useOpenWeather(
 ) {
   const fetchWeather = async () => {
     const params = {
-      latitude: toValue(lati),
-      longitude: toValue(long),
+      latitude: toValue(latitude),
+      longitude: toValue(longitude),
       current: [
         'temperature_2m',
         'relative_humidity_2m',
@@ -78,11 +81,13 @@ export function useOpenWeather(
   }
 
   if (lati !== null && long !== null) {
-    watch([lati, long], async () => {
+    latitude.value = toValue(lati)
+    longitude.value = toValue(long)
+    watch([latitude, longitude], async () => {
       fetchWeather()
       console.log(weatherData.value)
     })
   }
 
-  return { fetchWeather, weatherData, error }
+  return { latitude, longitude, fetchWeather, weatherData, error }
 }

@@ -1,7 +1,7 @@
 <template>
   <article>
     <header>{{ formatDate(props.day) }}</header>
-    <img :src="imageUrl" alt="" srcset="" />
+    <img :src="codeToImage(props.weatherCode)" alt="" srcset="" />
     <div class="temps">
       <span class="temp">{{ tempFormatter.format(props.temperature2mMin) }}</span>
       <span class="temp">{{ tempFormatter.format(props.temperature2mMax) }}</span>
@@ -24,7 +24,6 @@ function formatDate(day: Date): string {
   return day.toUTCString().slice(0, 12)
 }
 
-const imageUrl = codeToImage(props.weatherCode)
 const tempFormatter = new Intl.NumberFormat(navigator.language, {
   minimumIntegerDigits: 1,
   maximumFractionDigits: 0

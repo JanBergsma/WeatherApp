@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="daily-weather">
     <div class="img-container">
       <img :src="currentWeatherIconUrl" alt="" />
     </div>
@@ -57,18 +57,16 @@ const currentDate = computed(() => new Date().toDateString())
 </script>
 
 <style scoped>
-section {
+.daily-weather {
   position: relative;
-  height: 100%;
-  width: 100%;
   display: grid;
-  align-content: space-evenly;
+  align-content: stretch;
   justify-content: center;
   justify-items: center;
   gap: 1%;
 }
 
-section::before {
+.daily-weather::before {
   content: '';
   position: absolute;
   top: 0;
