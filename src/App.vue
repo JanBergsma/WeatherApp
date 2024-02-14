@@ -25,7 +25,6 @@ watch(search, () => console.log('search in ssbw', search.value))
         </template>
       </Switcher>
       <section class="overview">
-        <header></header>
         <div class="weather-cards">
           <WeatherDayCards />
         </div>
@@ -45,18 +44,22 @@ watch(search, () => console.log('search in ssbw', search.value))
 
 main {
   display: grid;
-  grid-template-columns: 3fr 7fr;
+  grid-template-columns: 3fr 8fr;
+  grid-template-rows: 95svh;
+  /* min-height: ; */
   padding: 0 2rem;
 }
-@container (max-width: 1100px) {
+@container (max-width: 900px) {
   main {
     grid-template-columns: 1fr;
+    gap: 2rem;
     padding: 0;
   }
 }
 .overview {
   display: grid;
-  grid-template-rows: 1fr 6fr 10fr 1fr;
+  grid-template-rows: 4fr 7fr 1rem;
+  align-items: center;
 }
 
 header {

@@ -63,7 +63,7 @@ const currentDate = computed(() => new Date().toDateString())
   align-content: stretch;
   justify-content: center;
   justify-items: center;
-  gap: 1%;
+  height: 80%;
 }
 
 .daily-weather::before {
