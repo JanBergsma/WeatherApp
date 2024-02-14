@@ -1,5 +1,5 @@
 <template>
-  <div role="search">
+  <div class="search" role="search">
     <form target="">
       <label for="city">
         <span id="search-icon"><IconSearch /></span>
@@ -88,7 +88,8 @@ button:active {
 }
 
 form {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   justify-content: center;
   gap: 0.4rem;
 }
@@ -98,7 +99,7 @@ label {
   display: grid;
   grid-auto-flow: column;
   gap: 0.4rem;
-  grid-template-columns: 1fr 99fr;
+  grid-template-columns: 1fr 9fr;
   padding: 0.4rem;
   width: min-content;
 }
@@ -121,12 +122,8 @@ input {
   padding-inline: 0;
 }
 
-search {
-  background: var(--bg-components);
+.search {
   color: var(--c-bright);
-  display: grid;
-
-  padding: 18% 0;
   font-size: var(--font-standard-plus-size);
   font-weight: var(--font-medium);
 }
@@ -140,6 +137,7 @@ ul {
   padding-top: 2rem;
   display: grid;
   gap: 1.4rem;
+  overflow: scroll;
 }
 .arrow-right {
   color: var(--c-dim);
@@ -170,4 +168,3 @@ li:focus .arrow-right {
   align-items: center;
 }
 </style>
-./Place ../stores/Place ../stores/PlaceInterface.js ../auxiliar/getFlagEmoji.js

@@ -44,8 +44,7 @@ watch(search, () => console.log('search in ssbw', search.value))
 
 main {
   display: grid;
-  grid-template-columns: 3fr 8fr;
-  grid-template-rows: 95svh;
+  grid-template-columns: 1fr 2fr;
   /* min-height: ; */
   padding: 0 2rem;
 }
