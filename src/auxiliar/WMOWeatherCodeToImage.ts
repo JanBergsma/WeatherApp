@@ -4,7 +4,7 @@ export function codeToImage(code: number): string {
     // Code	        Description
     case 0:
       // 0	        Clear sky
-      return 'src/assets/icons/Clear.png'
+      return './icons/Clear.png'
     // 1, 2, 3	    Mainly clear, partly cloudy, and overcast
     // 45, 48	    Fog and depositing rime fog
     case 1:
@@ -12,7 +12,7 @@ export function codeToImage(code: number): string {
     case 3:
     case 45:
     case 48:
-      return 'src/assets/icons/LightCloud.png'
+      return './icons/LightCloud.png'
     // 51, 53, 55	Drizzle: Light, moderate, and dense intensity
     // 56, 57	    Freezing Drizzle: Light and dense intensity
     case 51:
@@ -20,7 +20,7 @@ export function codeToImage(code: number): string {
     case 55:
     case 56:
     case 57:
-      return 'src/assets/icons/LightRain.png'
+      return './icons/LightRain.png'
     // 61, 63, 65	Rain: Slight, moderate and heavy intensity
     // 66, 67	    Freezing Rain: Light and heavy intensity
     case 61:
@@ -28,31 +28,31 @@ export function codeToImage(code: number): string {
     case 65:
     case 66:
     case 67:
-      return 'src/assets/icons/HeavyRain.png'
+      return './icons/HeavyRain.png'
     // 71, 73, 75	Snow fall: Slight, moderate, and heavy intensity
     // 77	        Snow grains
     case 71:
     case 73:
     case 75:
     case 77:
-      return 'src/assets/icons/Snow.png'
+      return './icons/Snow.png'
     // 80, 81, 82	Rain showers: Slight, moderate, and violent
     case 80:
     case 81:
     case 82:
-      return 'src/assets/icons/Shower.png'
+      return './icons/Shower.png'
 
     // 85, 86	    Snow showers slight and heavy
     case 85:
     case 86:
-      return 'src/assets/icons/Sleet.png'
+      return './icons/Sleet.png'
     // 95 	        Thunderstorm: Slight or moderate
     // 96, 99 	    Thunderstorm with slight and heavy hail
     case 95:
     case 96:
     case 99:
-      return 'src/assets/icons/Thunderstorm.png'
+      return './icons/Thunderstorm.png'
     default:
-      return 'src/assets/icons/devchallenges.png'
+      return './icons/devchallenges.png'
   }
 }
