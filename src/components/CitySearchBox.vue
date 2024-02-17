@@ -129,6 +129,7 @@ input {
 }
 
 ul {
+  background: var(--bg-components);
   list-style-type: none;
   padding-block: 0;
   padding-inline: 0;
@@ -137,7 +138,7 @@ ul {
   padding-top: 2rem;
   display: grid;
   gap: 1.4rem;
-  overflow: scroll;
+  overflow: visible;
 }
 .arrow-right {
   color: var(--c-dim);
