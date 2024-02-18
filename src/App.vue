@@ -50,9 +50,10 @@ main {
   /* min-height: ; */
   padding: 0 2rem;
 }
-@container (max-width: 900px) {
+@container (max-width: 1200px) {
   main {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
     gap: 2rem;
     padding: 0;
   }

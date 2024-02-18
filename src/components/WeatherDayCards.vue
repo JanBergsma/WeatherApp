@@ -33,7 +33,7 @@ article {
   justify-content: center;
   gap: 1rem;
 }
-@container (max-width: 400px) {
+@container (max-width: 680px) {
   .cards-container {
     grid-template-columns: repeat(2, 120px);
   }
